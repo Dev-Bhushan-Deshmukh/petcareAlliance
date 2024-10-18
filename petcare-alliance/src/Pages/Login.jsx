@@ -8,11 +8,12 @@ import { FaEyeSlash } from "react-icons/fa6";
 import { IoMdLock } from "react-icons/io";
 import { PiPawPrintFill } from "react-icons/pi";
 import { motion, AnimatePresence } from "framer-motion";
-import { Form } from '../components/Form';
+import { Form_ } from '../components/Form';
 export const Login = () => {
 
 const[showLogin,setShowlogin]=useState(false)
 const [userType,setUserType]=useState()
+const [formVisible,setFormVisible]=useState(false);
 
   return (
     <div className='h-screen w-screen bg-slate-50 flex  justify-center items-center'>
@@ -26,14 +27,14 @@ const [userType,setUserType]=useState()
 
 <button className='bg-slate-950 border-slate-400 border-2 w-[30%] h-[60%] rounded-md text-slate-50  flex items-center justify-center gap-2
  transition ease-in-out  hover:-translate-y-1 hover:scale-110 hover:bg-blue-700 hover:border-0 hover:shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)] duration-300'
-  onClick={()=>setShowlogin(true)}> <RiLoginCircleLine />Login</button>
+  onClick={()=>{setShowlogin(true) ;setFormVisible(false)}}> <RiLoginCircleLine />Login</button>
 
-<button className='bg-slate-950 border-slate-400 border-2 w-[30%] h-[60%] rounded-md text-slate-50  flex items-center justify-center gap-2 transition ease-in-out  hover:-translate-y-1 hover:scale-110 hover:bg-orange-700 hover:border-0 hover:shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)] duration-300' onClick={()=>setShowlogin(false)}> <IoMdAdd />Sign up</button>
+<button className='bg-slate-950 border-slate-400 border-2 w-[30%] h-[60%] rounded-md text-slate-50  flex items-center justify-center gap-2 transition ease-in-out  hover:-translate-y-1 hover:scale-110 hover:bg-orange-700 hover:border-0 hover:shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)] duration-300' onClick={()=>{setShowlogin(false)}}> <IoMdAdd />Sign up</button>
 
 
 </div>
 <AnimatePresence>
-  {!showLogin && <motion.div
+  {!showLogin && !formVisible  && <motion.div
   initial={{ opacity: 0, y: 0 }}
   animate={{ opacity: 1, y: 0 }}
 //Specified Exit animation
@@ -59,9 +60,13 @@ const [userType,setUserType]=useState()
 
 </div>
 {/* <button className='bg-green-500 border-slate-300 border-2 w-[30%] h-[22%] rounded-md text-slate-50  flex items-center justify-center gap-2'><BsPersonFillAdd /> Join</button> */}
-<button className='bg-green-500 border-slate-300 border-2 w-[30%] h-[22%] rounded-md text-slate-50  flex items-center justify-center gap-2 transition ease-in-out  hover:-translate-y-1 hover:scale-[101%] hover:bg-green-600 hover:border-0 hover:shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)] duration-300'><BsPersonFillAdd />Join</button>
+<button className='bg-green-500 border-slate-300 border-2 w-[30%] h-[22%] rounded-md text-slate-50  flex items-center justify-center gap-2 transition ease-in-out  hover:-translate-y-1 hover:scale-[101%] hover:bg-green-600 hover:border-0 hover:shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)] duration-300' onClick={()=>setFormVisible(true)}><BsPersonFillAdd />Join</button>
 
 </motion.div> }
+{!showLogin && formVisible  &&
+
+<Form_ userType={userType}/>
+}
 </AnimatePresence>
 <AnimatePresence>
 {showLogin &&
@@ -99,7 +104,7 @@ const [userType,setUserType]=useState()
 </AnimatePresence>
 
 
-<Form userType={userType}/>
+
 
 
 
