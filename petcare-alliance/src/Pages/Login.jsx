@@ -8,10 +8,11 @@ import { FaEyeSlash } from "react-icons/fa6";
 import { IoMdLock } from "react-icons/io";
 import { PiPawPrintFill } from "react-icons/pi";
 import { motion, AnimatePresence } from "framer-motion";
+import { Form } from '../components/Form';
 export const Login = () => {
 
 const[showLogin,setShowlogin]=useState(false)
-
+const [userType,setUserType]=useState()
 
   return (
     <div className='h-screen w-screen bg-slate-50 flex  justify-center items-center'>
@@ -44,12 +45,12 @@ const[showLogin,setShowlogin]=useState(false)
 
 <div className='flex items-center rounded-md border w-[30%] h-[50%] justify-evenly'> 
 <FaUser color='green' />
-<input type="radio" name='petOwner' /> <label htmlFor="petOwner">pet Owner</label>
+<input type="radio" name='petOwner' value='owner' onChange={(e)=>setUserType(e.target.value)} /> <label htmlFor="petOwner">pet Owner</label>
 
 </div>
 <div className='flex items-center rounded-md border w-[30%] h-[50%] justify-evenly'> 
 <RiServiceFill color='red' />
-<input type="radio" name='petOwner' /> <label htmlFor="petOwner">pet Service</label>
+<input type="radio" name='petOwner' value='service' onChange={(e)=>setUserType(e.target.value)} /> <label htmlFor="petOwner">pet Service</label>
 
 </div>
 
@@ -98,7 +99,7 @@ const[showLogin,setShowlogin]=useState(false)
 </AnimatePresence>
 
 
-
+<Form userType={userType}/>
 
 
 
