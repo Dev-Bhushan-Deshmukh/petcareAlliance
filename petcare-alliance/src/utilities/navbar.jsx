@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 export const Navbar = () => {
   return (
     <nav className='w-full h-[7%] bg-black flex justify-between items-center pl-5 pr-5'>
@@ -12,7 +12,7 @@ export const Navbar = () => {
 
 </ul>
 
-<button className='text-white bg-green-500 h-[60%] w-[20%] rounded-sm'>SignUp/login</button>
+<button className='text-white bg-green-500 h-[60%] w-[20%] rounded-sm'><Link to='/auth'>SignUp/login</Link></button>
 
 
 

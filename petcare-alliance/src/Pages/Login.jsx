@@ -9,6 +9,7 @@ import { IoMdLock } from "react-icons/io";
 import { PiPawPrintFill } from "react-icons/pi";
 import { motion, AnimatePresence } from "framer-motion";
 import { Form_ } from '../components/Form';
+import { Navbar } from '../utilities/navbar';
 export const Login = () => {
 
 const[showLogin,setShowlogin]=useState(false)
@@ -16,7 +17,12 @@ const [userType,setUserType]=useState()
 const [formVisible,setFormVisible]=useState(false);
 
   return (
-    <div className='h-screen w-screen bg-slate-50 flex  justify-center items-center'>
+
+    
+    <div className='h-screen w-screen bg-slate-200 flex flex-col justify-start items-center'>
+<Navbar/>
+{/* h-[90%]  */}
+    <div className='flex-1 w-screen bg-slate-50 flex  justify-center items-center'>
 <div className='h-[90%] w-[40%] bg-white rounded-tr-none rounded-br-none rounded-xl border grid place-items-center'  >
 
 
@@ -139,6 +145,8 @@ const [formVisible,setFormVisible]=useState(false);
 
 
 
+
+    </div>
 
     </div>
   )
