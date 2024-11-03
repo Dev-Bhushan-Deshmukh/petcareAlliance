@@ -1,4 +1,5 @@
 import React from 'react'
+import { PetForm } from './PetForm';
 
 export const PetDetails = () => {
 
@@ -12,6 +13,7 @@ export const PetDetails = () => {
         { src: 'https://images.unsplash.com/photo-1458410489211-ba19aa2f2902?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmlyZCUyMHBldHxlbnwwfHwwfHx8MA%3D%3D', name: 'Feathers' },
       ];
       
+
   return (
     <div className=' h-full flex-1'>
 
@@ -32,6 +34,20 @@ export const PetDetails = () => {
 
 
 </div>
+
+</div>
+
+
+
+
+<div className='h-[75%] w-[100%] bg-white'> 
+Add new pet
+<PetForm/>
+
+
+
+
+
 
 </div>
 
