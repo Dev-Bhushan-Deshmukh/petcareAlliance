@@ -1,5 +1,6 @@
 import React from 'react'
 import { PetForm } from './PetForm';
+import { motion } from 'framer-motion';
 
 export const PetDetails = () => {
 
@@ -15,7 +16,12 @@ export const PetDetails = () => {
       
 
   return (
-    <div className=' h-full flex-1'>
+    <motion.div
+    initial={{ opacity: 0, y: 0 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 0.4 }}
+  //Specified Exit animation
+    exit={{ opacity: 0, y: 0 }} className=' h-[92%]  w-full'>
 
 
 <div className='h-[25%] w-full  '>
@@ -40,7 +46,7 @@ export const PetDetails = () => {
 
 
 
-<div className='h-[75%] w-[100%] bg-white'> 
+<div className='h-[75%] w-[100%]'> 
 Add new pet
 <PetForm/>
 
@@ -51,6 +57,6 @@ Add new pet
 
 </div>
 
-    </div>
+    </motion.div>
   )
 }

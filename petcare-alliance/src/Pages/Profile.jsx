@@ -5,16 +5,18 @@ import { MdAlternateEmail, MdLocationOn } from 'react-icons/md'
 import { FaMobileAlt } from 'react-icons/fa'
 import { PiCity, PiSignpostFill } from 'react-icons/pi'
 import { Outlet, useNavigate } from 'react-router-dom'
+import { TabBar } from '../components/TabBar'
+import { AnimatePresence } from 'framer-motion'
 
 export const Profile = () => {
   const Navigate=useNavigate();
   return (
-    <div className='h-full w-full bg-slate-100 '>
+    <div className='h-full w-full  '>
 
 
 <Breadcrump/>
 
-<div className='h-[92%] w-full bg-slate-100 flex '>
+<div className='h-[92%] w-full  flex '>
   <div className='h-full w-[20%] flex flex-col items-center bg-white'>
 
 <img src="https://img.freepik.com/premium-photo/young-african-american-man-brown-jacket-poses-street_115318-8153.jpg" alt="" className=' w-[95%] mt-2 rounded-md' />
@@ -46,8 +48,15 @@ export const Profile = () => {
 
 
   </div>
+  <div className=' h-full flex-1 '>
+  <TabBar/>
+  <AnimatePresence>
 
-<Outlet />
+  <Outlet />
+  </AnimatePresence>
+ 
+  </div>
+ 
 
 
 

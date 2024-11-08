@@ -9,7 +9,7 @@ export const Application = () => {
         
         <CollapsibleSidebar/>
  
-        <div className='flex-1 h-full bg-slate-200'>
+        <div className='flex-1 h-full '>
 
 <Outlet/>
 

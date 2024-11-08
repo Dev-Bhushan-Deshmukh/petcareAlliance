@@ -305,7 +305,7 @@ console.log(data)
 const steps=[<StepOne next={handleNext} data={data} />,<StepTwo  next={handleNext} previous={handlePrevious} data={data}/>,<StepThree next={handleNext} previous={handlePrevious} data={data}/>,<StepFour next={handleNext} previous={handlePrevious} data={data}/>,<StepFive next={handleNext} previous={handlePrevious} data={data}/>,<StepSix next={handleNext} previous={handlePrevious} data={data}/>,<StepSeven  previous={handlePrevious} data={data}/>];
 
   return (
-    <div className='h-full w-full bg-slate-300'>
+    <div className='h-full w-full '>
 {currentStep}
 
 {steps[currentStep]}
