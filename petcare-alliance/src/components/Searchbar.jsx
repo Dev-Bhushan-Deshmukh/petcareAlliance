@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { IoMdClose } from "react-icons/io";
 import { motion,AnimatePresence } from 'framer-motion';
-export const Searchbar = () => {
+export const Searchbar = ({width}) => {
 const[inputArray,setInputArray]=useState([]);
     const[currentElement,setCurrentElement]=useState('')
 const[listFocus,setlistFocus]=useState(false)
@@ -62,7 +62,7 @@ function removeItem_(e){
   
 
 
-<div className='w-[50%] h-[100%] rounded-md justify-center flex border border-gray-200 bg-white '>
+<div className={` w-[${width}%] h-[100%] rounded-md justify-center flex border border-gray-200 bg-white `}>
 
 
 
@@ -117,7 +117,7 @@ key={item} className='min-w-[40%] w-fit h-[80%] bg-slate-50 rounded-lg flex item
 </div>
 
 
-<input type="text" ref={inputRef} placeholder='Enter items' className='flex-1 rounded-md placeholder:text-slate-200 pl-2 outline-slate-300 text-slate-500 font-semibold' onKeyDown={callFUnc} />
+<input type="text" ref={inputRef} placeholder='Enter items' className='flex-1 rounded-md placeholder:text-slate-200 pl-2 outline-slate-100 text-slate-500 font-semibold' onKeyDown={callFUnc} />
 </div>
 
    
