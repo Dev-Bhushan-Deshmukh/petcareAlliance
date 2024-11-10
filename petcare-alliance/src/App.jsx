@@ -9,6 +9,11 @@ import { Application } from './Pages/Application'
 import { Profile } from './Pages/Profile'
 import { History } from './components/History'
 import { PetDetails } from './components/PetDetails'
+import { Schedule } from './components/Schedule'
+import { Service } from './Pages/Service'
+import { Activity } from './components/Activity'
+import { Routine } from './components/Routine'
+import { HealthCheckup } from './components/HealthCheckup'
 
 function App() {
 let router=createBrowserRouter([
@@ -25,9 +30,18 @@ let router=createBrowserRouter([
   
       { path:'/application/profile/petdetail', element:<PetDetails/> }
     
-  ]}
+  ]},
+  {path:'/application/schedule', element:<Schedule/>,children:[
+{path:'/application/schedule/activity', element:<Activity/>},
+{path:'/application/schedule/routine', element:<Routine/>},
+{path:'/application/schedule/healthcheckup', element:<HealthCheckup/>}
 
 
+
+  ] },
+  {path:'/application/service', element:<Service/> }
+  
+  
 
 
 ]},

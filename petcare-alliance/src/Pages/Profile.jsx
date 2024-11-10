@@ -1,14 +1,20 @@
 import React from 'react'
 import { Breadcrump } from '../components/Breadcrump'
 import { FaUser } from 'react-icons/fa6'
-import { MdAlternateEmail, MdLocationOn } from 'react-icons/md'
+import { MdAlternateEmail, MdLocationOn, MdPets } from 'react-icons/md'
 import { FaMobileAlt } from 'react-icons/fa'
 import { PiCity, PiSignpostFill } from 'react-icons/pi'
 import { Outlet, useNavigate } from 'react-router-dom'
 import { TabBar } from '../components/TabBar'
 import { AnimatePresence } from 'framer-motion'
+import { IoMdListBox } from 'react-icons/io'
 
 export const Profile = () => {
+  const tabData={
+    tabOption:['My pet','History'],
+    links:[{href:'/application/profile/petdetail' ,icon:<MdPets/>,name:'My pet'},{href:'/application/profile/History',icon:<IoMdListBox/>,name:'History'}]
+
+  }
   const Navigate=useNavigate();
   return (
     <div className='h-full w-full  '>
@@ -49,7 +55,7 @@ export const Profile = () => {
 
   </div>
   <div className=' h-full flex-1 '>
-  <TabBar/>
+  <TabBar tabData={tabData}/>
   <AnimatePresence>
 
   <Outlet />

@@ -3,18 +3,21 @@ import { IoMdListBox } from 'react-icons/io'
 import { MdPets } from 'react-icons/md'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-export const TabBar = () => {
+export const TabBar = ({tabData}) => {
 
-const[tabName,setTabName]=useState('pet')
+
+
+
+const[tabName,setTabName]=useState(tabData.tabOption[0])
 
   return (
     <div className='h-[5%] w-[100%]   flex items-center gap-2 '>
-        <Link to='/application/profile/petdetail' className={`h-[80%] w-[10%] ${tabName=='pet' && 'border-b-2'}  border-blue-600`} onClick={()=>setTabName('pet')}>
+{tabData.links.map((item)=>   <Link to={item.href} className={`h-[80%] w-[10%] ${tabName==item.name && 'border-b-2'}  border-blue-600`} onClick={()=>setTabName(item.name)}>
         <motion.div 
         
-        className='flex items-center justify-center gap-5 '> <MdPets /> My pet</motion.div> </Link>
-        <Link to='/application/profile/History' className={`h-[80%] w-[10%] ${tabName=='history' && 'border-b-2'}  border-blue-600`} onClick={()=>setTabName('history')}>
-           <motion.div className='flex items-center justify-center gap-5'> <IoMdListBox />History</motion.div> </Link>
+        className='flex items-center justify-center gap-5 '> {item.icon}{item.name}</motion.div> </Link>)}
+
+
 
     </div>
   )

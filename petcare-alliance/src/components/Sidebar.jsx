@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { motion,AnimatePresence } from 'framer-motion';
 import { CiSearch } from 'react-icons/ci';
 import { MdOutlineHome } from 'react-icons/md';
-import { RiCalendarScheduleLine } from 'react-icons/ri';
+import { RiCalendarScheduleLine, RiServiceFill } from 'react-icons/ri';
 import { FaRegMessage } from 'react-icons/fa6';
 import { TbBrandGoogleAnalytics } from 'react-icons/tb';
 import { IoSettingsOutline } from 'react-icons/io5';
@@ -51,17 +51,7 @@ export const CollapsibleSidebar = () => {
 
 </div>
 
-<div className={`flex ${show ?'justify-start':'justify-center'} cursor-pointer w-[98%] h-[7%] items-center gap-3  pl-1 pr-1  rounded-md hover:bg-slate-50`}>
 
-<SiAmazongames onClick={()=>setShow(true)} color='grey'   fontSize={
-  24
-} />
-{
-  show && <span className='font-semibold text-teal-800 text-lg'><Link to='/game'>Game</Link></span> 
-
-}
-
-</div>
 
 <div className={`flex ${show ?'justify-start':'justify-center'} cursor-pointer w-[98%]  h-[7%] items-center gap-3  pl-1 pr-1  rounded-md hover:bg-slate-50`}>
 <RiCalendarScheduleLine onClick={()=>setShow(true)} color='grey'    fontSize={
@@ -69,17 +59,17 @@ export const CollapsibleSidebar = () => {
 } />
 {
   show &&
-<span className='font-semibold text-teal-800 text-lg'> <Link to='/schedule'>schedule</Link> </span> 
+<span className='font-semibold text-teal-800 text-lg'> <Link to='/application/schedule'>schedule</Link> </span> 
 
 }
 </div>
 <div className={`flex ${show ?'justify-start':'justify-center'} cursor-pointer w-[98%] h-[7%] items-center gap-3  pl-1 pr-1  rounded-md hover:bg-slate-50`}>
-<FaRegMessage onClick={()=>setShow(true)} color='grey'    fontSize={
+<RiServiceFill   onClick={()=>setShow(true)} color='grey'    fontSize={
   20
 } />
 {
   show &&
-<span className='font-semibold text-teal-800 text-lg'>  <Link to='/message'>Message</Link></span> 
+<span className='font-semibold text-teal-800 text-lg'>  <Link to='/application/service'>Service</Link></span> 
 
 }
 </div>
