@@ -8,7 +8,7 @@ export const Navbar = () => {
 <ul className='  h-full w-[80%] flex justify-evenly items-center text-slate-400'>
 <li>Service</li>
 <li>Contact</li>
-<li>About</li>
+<li><Link to='/about'>About</Link></li>
 
 </ul>
 

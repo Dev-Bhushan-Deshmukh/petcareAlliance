@@ -14,11 +14,14 @@ import { Service } from './Pages/Service'
 import { Activity } from './components/Activity'
 import { Routine } from './components/Routine'
 import { HealthCheckup } from './components/HealthCheckup'
+import { FcAbout } from 'react-icons/fc'
+import { About } from './Pages/About'
 
 function App() {
 let router=createBrowserRouter([
  
 {path:'/', element:<Home/>},
+{path:'/about', element:<About/>},
 {path:'/auth', element:<Login/>},
 
 {path:'/application', element:<Application/>, children:[
