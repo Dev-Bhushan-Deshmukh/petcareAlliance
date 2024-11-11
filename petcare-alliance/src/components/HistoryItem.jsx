@@ -5,12 +5,12 @@ import { PiCalendarCheckLight, PiNoteLight } from 'react-icons/pi'
 import { IoCheckmarkDoneCircleOutline } from "react-icons/io5";
 import { BiExpandAlt } from 'react-icons/bi';
 export const HistoryItem = ({data}) => {
-let styles='rounded-full h-[45%] flex items-center gap-2 justify-center w-full text-center text-slate-400 text-sm font-normal'
+let styles='rounded-full h-[45%] flex items-center gap-2 justify-center w-full text-center  text-sm font-normal'
 let bgObj={
-    COMPLETE:'green-50 text-green-400',
-    'IN PROGRESS':'white text-slate-800',
-    CANCELLED:'red-50 text-red-300',
-    PENDING:'slate-100 text-slate-300',
+    COMPLETE:'bg-green-50 text-green-400',
+    'IN PROGRESS':'bg-white text-slate-800',
+    CANCELLED:'bg-red-50 text-red-300',
+    PENDING:'bg-slate-100 text-slate-300',
 }
 
 
@@ -34,7 +34,7 @@ let bgObj={
 <div className='w-[9%]  h-full flex items-center justify-start gap-2'><PiNoteLight />Note <div className='text-white bg-red-500 rounded-full h-[20px] w-[20px] grid place-content-center text-sm font-normal'>{data.notesCount}</div></div>
 <div className='w-[9%] h-full flex items-center justify-start gap-2'> 
 
-<div className={`${styles} bg-${bgObj[data.status]}` }>  {data.status=='IN PROGRESS' && <div className='h-[10px] w-[10px] bg-green-500 rounded-full shadow-md'></div>  } {data.status}</div>
+<div className={`${styles} ${bgObj[data.status]}` }>  {data.status=='IN PROGRESS' && <div className='h-[10px] w-[10px] bg-green-500 rounded-full shadow-md'></div>  } {data.status}</div>
 
 </div>
 {/* <div className='w-[9%] h-full flex items-center justify-center gap-2'> */}
