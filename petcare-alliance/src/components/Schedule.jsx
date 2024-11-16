@@ -7,12 +7,15 @@ import { MdOutlineSchedule } from 'react-icons/md'
 import { VscTable } from "react-icons/vsc";
 import { TbHealthRecognition } from 'react-icons/tb'
 
+
 export const Schedule = () => {
     const tabData={
         tabOption:['activity','routine','healthcheckup'],
         links:[{href:'/application/schedule/activity' ,icon:<MdOutlineSchedule />,name:'Activity'},
-            {href:'/application/schedule/routine',icon:<VscTable />,name:'Routine'},
-            {href:'/application/schedule/healthcheckup',icon:<TbHealthRecognition />,name:'Healthcheckup'}]
+          {href:'/application/schedule/routine',icon:<VscTable />,name:'Routine'},
+          {href:'/application/schedule/healthcheckup',icon:<TbHealthRecognition />,name:'Healthcheckup'}
+           
+            ]
     
       }
 
