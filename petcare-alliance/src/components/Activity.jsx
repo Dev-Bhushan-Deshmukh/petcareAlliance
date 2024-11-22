@@ -23,9 +23,9 @@ export const Activity = () => {
         
         <div className='h-[5%] mb-2 w-full flex items-center pl-2 pr-2 justify-between  '>
 <Searchbar  width={40} />
-<button className={`bg-blue-600 ${new_ ? 'w-[7%]':'w-[10%]'} h-full rounded-sm flex items-center text-white justify-center gap-3`} onClick={()=>setNew(prev=>!prev)}> {new_ ? <TbClockPlus />: <CiViewList />}{new_ ? 'New': 'Activities'}  </button>
+<button className={`bg-blue-600 ${new_ ? 'w-[10%]':'w-[7%]'} h-full rounded-sm flex items-center text-white justify-center gap-3`} onClick={()=>setNew(prev=>!prev)}> {new_ ? < CiViewList />: <TbClockPlus />}{new_ ? 'Activities': 'New'}  </button>
 </div>
-{new_ ?<NewActivity/> :<ActivityList/>}
+{new_ ?<NewActivity/>: <ActivityList/>}
 
 
 
