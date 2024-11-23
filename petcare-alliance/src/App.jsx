@@ -16,6 +16,9 @@ import { Routine } from './components/Routine'
 import { HealthCheckup } from './components/HealthCheckup'
 import { FcAbout } from 'react-icons/fc'
 import { About } from './Pages/About'
+import { Services } from './components/Services'
+import { KnowMore } from './components/KnowMore'
+import { Book } from './components/Book'
 
 function App() {
 let router=createBrowserRouter([
@@ -42,7 +45,14 @@ let router=createBrowserRouter([
 
 
   ] },
-  {path:'/application/service', element:<Service/> }
+  {path:'/application/service', element:<Service/>, children:[
+    {path:'/application/service/category', element:<Services/>},
+    {path:'/application/service/knowmore', element:<KnowMore/>},
+    {path:'/application/service/book/:name', element:<Book/>},
+
+
+
+  ] }
   
   
 

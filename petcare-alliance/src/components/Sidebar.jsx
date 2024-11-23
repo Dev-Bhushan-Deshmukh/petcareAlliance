@@ -69,7 +69,7 @@ export const CollapsibleSidebar = () => {
 } />
 {
   show &&
-<span className='font-semibold text-teal-800 text-lg'>  <Link to='/application/service'>Service</Link></span> 
+<span className='font-semibold text-teal-800 text-lg'>  <Link to='/application/service/category'>Service</Link></span> 
 
 }
 </div>
@@ -79,7 +79,7 @@ export const CollapsibleSidebar = () => {
 } />
 {
   show &&
-<span className='font-semibold text-teal-800 text-lg'><Link to='/analytics'>Analytics</Link></span> 
+<span className='font-semibold text-teal-800 text-lg'><Link to='/application/service/knowmore'>Analytics</Link></span> 
 }
 </div>
 <div className={`flex ${show ?'justify-start':'justify-center'}   cursor-pointer w-[98%] h-[7%] items-center gap-3  pl-1 pr-1  rounded-md hover:bg-slate-50`}>
