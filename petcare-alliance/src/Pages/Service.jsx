@@ -54,12 +54,12 @@ export const Service = () => {
 
 
     return (
-        <div className='h-full w-full flex flex-col  '>
+        <div className='h-full w-full  '>
     
     
         <Breadcrump/> 
        
-<div className='flex-1 w-full  '>
+<div className=' h-[92%]  w-full  '>
 
 <Outlet/>
 

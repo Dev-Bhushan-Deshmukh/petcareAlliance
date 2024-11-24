@@ -19,6 +19,7 @@ import { About } from './Pages/About'
 import { Services } from './components/Services'
 import { KnowMore } from './components/KnowMore'
 import { Book } from './components/Book'
+import { Booking } from './components/Booking'
 
 function App() {
 let router=createBrowserRouter([
@@ -48,8 +49,8 @@ let router=createBrowserRouter([
   {path:'/application/service', element:<Service/>, children:[
     {path:'/application/service/category', element:<Services/>},
     {path:'/application/service/knowmore', element:<KnowMore/>},
-    {path:'/application/service/book', element:<Book/>},
-
+    {path:'/application/service/list', element:<Book/>},
+    {path:'/application/service/booking', element:<Booking/>},
 
 
   ] }

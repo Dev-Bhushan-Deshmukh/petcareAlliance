@@ -77,7 +77,7 @@ icon:  <BsCalendarHeart fontSize={20} className='ml-1 mt-1 mb-1' />
   
   <div className='flex justify-between pl-1 pr-1 items-end'>
 
-  <button className='bg-orange-400 rounded-sm text-sm   w-[40%] h-[25px] text-slate-100  hover:bg-green-500  '> <Link to={`/application/service/book?name=${item.id}`}>
+  <button className='bg-orange-400 rounded-sm text-sm   w-[40%] h-[25px] text-slate-100  hover:bg-green-500  '> <Link to={`/application/service/list?name=${item.id}`}>
   
 Book now
   
