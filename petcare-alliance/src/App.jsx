@@ -48,7 +48,7 @@ let router=createBrowserRouter([
   {path:'/application/service', element:<Service/>, children:[
     {path:'/application/service/category', element:<Services/>},
     {path:'/application/service/knowmore', element:<KnowMore/>},
-    {path:'/application/service/book/:name', element:<Book/>},
+    {path:'/application/service/book', element:<Book/>},
 
 
 
