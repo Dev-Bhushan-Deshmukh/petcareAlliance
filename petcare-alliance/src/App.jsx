@@ -20,6 +20,8 @@ import { Services } from './components/Services'
 import { KnowMore } from './components/KnowMore'
 import { Book } from './components/Book'
 import { Booking } from './components/Booking'
+import { AgencyDetails } from './components/AgencyDetails'
+import { ServiceBooking } from './components/ServiceBooking'
 
 function App() {
 let router=createBrowserRouter([
@@ -50,7 +52,12 @@ let router=createBrowserRouter([
     {path:'/application/service/category', element:<Services/>},
     {path:'/application/service/knowmore', element:<KnowMore/>},
     {path:'/application/service/list', element:<Book/>},
-    {path:'/application/service/booking', element:<Booking/>},
+    {path:'/application/service/booking', element:<Booking/> ,children:[
+
+      {path:'/application/service/booking/agency', element:<AgencyDetails/>},
+      {path:'/application/service/booking/bookservice', element:<ServiceBooking/>}
+
+    ]},
 
 
   ] }
