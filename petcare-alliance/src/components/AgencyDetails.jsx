@@ -100,7 +100,7 @@ const[currentService,setCurrentService]=useState(0);
 </div>
 
 </div>
-<h1 className='bg-slate-50 h-[4%] font-semibold pl-3'>We perovide service for </h1>
+<h1 className='bg-slate-50 h-[4%] font-semibold pl-3'>We provide service for </h1>
 <div className='h-[15%] w-full  flex items-center gap-5 pl-3 mt-3  '>
 {
 
