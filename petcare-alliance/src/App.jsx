@@ -22,6 +22,7 @@ import { Book } from './components/Book'
 import { Booking } from './components/Booking'
 import { AgencyDetails } from './components/AgencyDetails'
 import { ServiceBooking } from './components/ServiceBooking'
+import { Developement } from './Pages/Developement'
 
 function App() {
 let router=createBrowserRouter([
@@ -35,9 +36,9 @@ let router=createBrowserRouter([
   {path:'/application/profile', element:<Profile/>  ,children:[
     
     
-    {index:true, path:'/application/profile/History', element:<History/> },
+    { path:'/application/profile/History', element:<History/> },
   
-      { path:'/application/profile/petdetail', element:<PetDetails/> }
+      {index:true, path:'/application/profile/petdetail', element:<PetDetails/> }
     
   ]},
   {path:'/application/schedule', element:<Schedule/>,children:[
@@ -60,7 +61,8 @@ let router=createBrowserRouter([
     ]},
 
 
-  ] }
+  ] },
+  {path:'/application/dev', element:<Developement/>}
   
   
 

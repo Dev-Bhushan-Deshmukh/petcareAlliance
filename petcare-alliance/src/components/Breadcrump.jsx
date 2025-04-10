@@ -8,22 +8,22 @@ import { MdChevronRight } from 'react-icons/md';
 import { Link, useLocation } from 'react-router-dom';
 
 export const Breadcrump = () => {
-  console.log('re-render occured at breadcrump')
+  // console.log('re-render occured at breadcrump')
     const loc=useLocation()
     // const[loc,seLocation]=useState(location);
-    console.log('loc',loc)
+    // console.log('loc',loc)
     let currLink='';
   const crumps=loc.pathname.split('/').filter((item)=>item!=='');
 
 {/* <CiCircleList /> */}
 
 
-const icons={
-'inner':'ss',
-'inner2':<BiSolidUserDetail />,
+// const icons={
+// 'inner':'ss',
+// 'inner2':<BiSolidUserDetail />,
 
-'homepage':<FcHome />
-}
+// 'homepage':<FcHome />
+// }
 
 
 
@@ -36,8 +36,8 @@ const icons={
       {crumps.map((items,index)=>{
 currLink+=`/${items}`
 const lastIndex=index===crumps.length-1;
-return lastIndex ?<span className='bg-slate-50 h-[50%] flex w-[100px] items-center justify-between  rounded-tr-md rounded-br-md'> {items}</span>:
-<span className='bg-slate-50 h-[50%] flex w-[100px] items-center justify-between '> 
+return lastIndex ?<span key={index} className='bg-slate-50 h-[50%] flex w-[100px] items-center justify-between  rounded-tr-md rounded-br-md'> {items}</span>:
+<span key={index} className='bg-slate-50 h-[50%] flex w-[100px] items-center justify-between '> 
 {/* {icons && icons[items] } */}
 <Link className='text-slate-800 font-bold' to={currLink}>{items}</Link>
 <MdChevronRight /></span>

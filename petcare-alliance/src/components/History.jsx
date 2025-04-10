@@ -132,7 +132,7 @@ export const History = () => {
 
 
 <div className='h-[95%] w-full overflow-y-auto '>
-  {petHistoryData.map((item)=><HistoryItem  data={item} />)}
+  {petHistoryData.map((item,index)=><HistoryItem  key={index} data={item} />)}
 
   {/* filter by pet,service,date,serive type,status  ,sort by date , count icon, select or select all print
 petname,service name-pic,date-s,e-date,service type,note,open icon,archive,status,chat */}

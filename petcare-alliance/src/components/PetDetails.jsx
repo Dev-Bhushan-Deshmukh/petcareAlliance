@@ -28,7 +28,7 @@ export const PetDetails = () => {
 <h1 className='font-semibold text-slate-700'>My Pets</h1>
 <div className='h-[70%] w-full flex items-center justify-start gap-10'>
 
-{pets.map(item=><div className='h-full w-[10%] font-semibold text-slate-600 flex flex-col   justify-center'>
+{pets.map((item,index)=><div key={index} className='h-full w-[10%] font-semibold text-slate-600 flex flex-col   justify-center'>
 <img src={item.src} className='h-[110px] w-[110px] object-cover rounded-md'/>
 {item.name}
 </div>)}
