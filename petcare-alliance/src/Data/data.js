@@ -130,3 +130,14 @@ export const pets = [
           "Nu Networks"
         ];
         
+
+
+
+
+       export const statusArray = [
+          { status: "Active", value: false },
+          { status: "Inactive", value: false },
+          { status: "Pending", value: false },
+          { status: "Suspended", value: false },
+          { status: "Blacklisted", value: false }
+        ];
