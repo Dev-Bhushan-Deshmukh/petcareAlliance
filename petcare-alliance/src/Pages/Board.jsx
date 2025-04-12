@@ -3,6 +3,7 @@ import { hierarchy, poll } from '../Data/data'
 import { BoardItem } from '../components/BoardItem'
 import { AnimatePresence, motion } from 'framer-motion';
 import { HiUserGroup } from "react-icons/hi2";
+import { Canban } from '../components/Canban';
 export const Board = () => {
     
   const[pollState,setPollState]=useState({  question:null,
@@ -119,6 +120,16 @@ initial={{ opacity: 0, scale: 0.75 }}
         
         </div>
         
+
+
+
+
+
+
+        <Canban/>
+
+
+
         </div>
   )
 }

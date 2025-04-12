@@ -235,3 +235,14 @@ export const pets = [
           totalVotes: 100
         };
         
+
+
+
+        export const tasks = [
+          { id: 1, title: "Setup project", status: "To Do" },
+          { id: 2, title: "Design wireframes", status: "In Progress" },
+          { id: 3, title: "Create components", status: "To Do" },
+          { id: 4, title: "Write tests", status: "Review" },
+          { id: 5, title: "Deploy to server", status: "Done" }
+        ];
+        
