@@ -23,6 +23,7 @@ import { Booking } from './components/Booking'
 import { AgencyDetails } from './components/AgencyDetails'
 import { ServiceBooking } from './components/ServiceBooking'
 import { Developement } from './Pages/Developement'
+import { Board } from './Pages/Board'
 
 function App() {
 let router=createBrowserRouter([
@@ -62,8 +63,8 @@ let router=createBrowserRouter([
 
 
   ] },
-  {path:'/application/dev', element:<Developement/>}
-  
+  {path:'/application/dev', element:<Developement/>},
+  {path:'/application/board', element:<Board/>}
   
 
 

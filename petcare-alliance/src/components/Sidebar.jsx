@@ -92,6 +92,15 @@ export const CollapsibleSidebar = () => {
  }
   </div>
 
+  <div className={`flex ${show ?'justify-start':'justify-center'}   cursor-pointer w-[98%] h-[7%] items-center gap-3  pl-1 pr-1  rounded-md hover:bg-slate-50`}>
+<IoSettingsOutline onClick={()=>setShow(true)} color='grey'     fontSize={
+  20
+} />
+{
+  show &&
+<span className='font-semibold text-teal-800 text-lg'><Link to='/application/board'>Board</Link></span>
+ }
+  </div>
 
 
 

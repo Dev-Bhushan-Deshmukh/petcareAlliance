@@ -141,3 +141,85 @@ export const pets = [
           { status: "Suspended", value: false },
           { status: "Blacklisted", value: false }
         ];
+
+
+
+
+
+       export const hierarchy = [
+          {
+            id: "ceo_1",
+            name: "Alice Johnson",
+            role: "Chief Executive Officer",
+            children: [
+              {
+                id: "cto_1",
+                name: "Bob Smith",
+                role: "Chief Technology Officer",
+                children: [
+                  {
+                    id: "devmgr_1",
+                    name: "Carol White",
+                    role: "Development Manager",
+                    children: [
+                      {
+                        id: "dev_1",
+                        name: "David Adams",
+                        role: "Frontend Developer"
+                      },
+                      {
+                        id: "dev_2",
+                        name: "Eva Brown",
+                        role: "Backend Developer"
+                      }
+                    ]
+                  },
+                  {
+                    id: "qa_1",
+                    name: "Frank Green",
+                    role: "QA Manager",
+                    children: [
+                      {
+                        id: "qa_2",
+                        name: "Grace Lee",
+                        role: "QA Tester"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                id: "cfo_1",
+                name: "Helen Carter",
+                role: "Chief Financial Officer",
+                children: [
+                  {
+                    id: "finmgr_1",
+                    name: "Ian Walker",
+                    role: "Finance Manager",
+                    children: [
+                      {
+                        id: "acc_1",
+                        name: "Jane Roberts",
+                        role: "Accountant"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                id: "coo_1",
+                name: "Kevin Turner",
+                role: "Chief Operating Officer",
+                children: [
+                  {
+                    id: "ops_1",
+                    name: "Linda Scott",
+                    role: "Operations Manager"
+                  }
+                ]
+              }
+            ]
+          }
+        ];
+        

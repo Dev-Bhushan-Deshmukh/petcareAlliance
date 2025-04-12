@@ -137,7 +137,7 @@ else{
 
 const temp=tempArr.filter((item)=>!item.status.toLocaleLowerCase().includes((e.target.value).toLocaleLowerCase())) //non existing
 const present=tempArr.filter((item)=>item.status.toLocaleLowerCase().includes((e.target.value).toLocaleLowerCase())) // existing
-setActiveList(present);
+setActiveList(present);  
 
 present.forEach((item)=>temp.unshift(item))
 console.log(temp,"temp")
