@@ -223,3 +223,15 @@ export const pets = [
           }
         ];
         
+
+        export const poll = {
+          question: "What's your favorite frontend framework?",
+          options: [
+            { id: 1, text: "React", votes: 50 },
+            { id: 2, text: "Vue", votes: 30 },
+            { id: 3, text: "Angular", votes: 10 },
+            { id: 4, text: "Svelte", votes: 10 }
+          ],
+          totalVotes: 100
+        };
+        

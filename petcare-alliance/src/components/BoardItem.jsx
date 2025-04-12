@@ -60,3 +60,35 @@ export const BoardItem = ({ item }) => {
     </div>
   );
 };
+
+
+//* Next Level Ideas You Could Try:
+// Expand/Collapse Children
+// Toggle visibility of child nodes for cleaner navigation.
+
+// Add Icons or Avatars
+// Use react-icons or dummy profile pics to give more life to the nodes.
+
+// Drag-and-Drop Reordering
+// If you ever wanna spice things up, you could use react-beautiful-dnd to rearrange roles.
+
+// Context Menu on Right Click
+// Add options like "Edit", "Add Role", or "Remove" when right-clicking on a node.
+
+// Zoomable/Pannable Org Chart
+// Especially cool if your hierarchy gets deep. Use CSS transforms or react-zoom-pan-pinch.
+
+// 
+
+// 💡 Add Tailwind Colors to Make It Pop
+// You can use bg-blue-50, bg-yellow-50, etc., and give each level or role different colors if you want.
+
+// 🌟 Optional: Add Connecting Lines with CSS
+// For a more "org chart" feel, you can:
+
+// Use pseudo-elements (before and after) for horizontal & vertical lines.
+
+// Or install a lib like react-organizational-chart for a plug-n-play tree UI.
+
+// Bonus Tailwind Tip
+// You can style based on depth level like this:
