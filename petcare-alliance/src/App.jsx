@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { Home } from './Pages/home'
-import {createBrowserRouter,RouterProvider} from 'react-router-dom'
+import {createBrowserRouter,Outlet,RouterProvider} from 'react-router-dom'
 import { Login } from './Pages/Login'
 import { Application } from './Pages/Application'
 import { Profile } from './Pages/Profile'
@@ -24,10 +24,26 @@ import { AgencyDetails } from './components/AgencyDetails'
 import { ServiceBooking } from './components/ServiceBooking'
 import { Developement } from './Pages/Developement'
 import { Board } from './Pages/Board'
+import { Toast } from './components/Toast'
 
 function App() {
+  
+function Layout() {
+  return (
+      <>
+        <Toast />
+        <Outlet />
+   
+      </>
+  );
+}
 let router=createBrowserRouter([
+ {
+  // element: <Layout/>,
  
+    children: [  
+
+
 {path:'/', element:<Home/>},
 {path:'/about', element:<About/>},
 {path:'/auth', element:<Login/>},
@@ -70,7 +86,7 @@ let router=createBrowserRouter([
 
 ]},
 
-
+    ]}
 
 
 

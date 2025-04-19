@@ -9,8 +9,21 @@ import {
   statuses,
   statusArray,
 } from "../Data/data";
+import { useDispatch } from "react-redux";
+import { newNotification } from "../slices/notification";
 export const Developement = () => {
 // console.log('rendred')
+
+    const dispatch=useDispatch();
+useEffect(()=>{
+  setTimeout(() => {
+    dispatch(newNotification({id:`${new Date().getSeconds()}`,name:'Developement',message:'Development notification arrived'}))
+  }, 3000);
+
+
+
+
+},[]);
 
   const [dataSet, setDataSet] = useState([]);
   const [dataSetCopy, setDataSetCopy] = useState([]);
