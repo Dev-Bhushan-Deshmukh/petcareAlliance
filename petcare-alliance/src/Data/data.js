@@ -246,3 +246,15 @@ export const pets = [
           { id: 5, title: "Deploy to server", status: "Done" }
         ];
         
+
+
+
+        export const invoicItems=[
+{id:'i1',name:'Eggs',price:70,quantity:0},
+
+{id:'i2',name:'Banana',price:40,quantity:0},
+{id:'i3',name:'spinach',price:20,quantity:0},
+{id:'i4',name:'Oats',price:50,quantity:0},
+
+
+        ]

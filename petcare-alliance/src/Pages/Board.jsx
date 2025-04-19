@@ -4,6 +4,9 @@ import { BoardItem } from '../components/BoardItem'
 import { AnimatePresence, motion } from 'framer-motion';
 import { HiUserGroup } from "react-icons/hi2";
 import { Canban } from '../components/Canban';
+import { AutoComplete } from '../components/AutoComplete';
+import { StartRatings } from '../components/StartRatings';
+import { Invoice } from '../components/Invoice';
 export const Board = () => {
     
   const[pollState,setPollState]=useState({  question:null,
@@ -128,8 +131,9 @@ initial={{ opacity: 0, scale: 0.75 }}
 
         <Canban/>
 
-
-
+        {/* <AutoComplete/> */}
+{/* <StartRatings/> */}
+<Invoice/>
         </div>
   )
 }
