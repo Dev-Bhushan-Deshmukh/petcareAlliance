@@ -11,6 +11,8 @@ import { Toast } from '../components/Toast';
 
 import { newNotification } from '../slices/notification';
 import { useDispatch } from 'react-redux';
+import { TypingIndicator } from '../components/TypingIndicator';
+import { BellNotifications } from '../components/BellNotifications';
 export const Board = () => {
     const dispatch=useDispatch();
 useEffect(()=>{
@@ -119,9 +121,10 @@ initial={{ opacity: 0, scale: 0.75 }}
 {/* <StartRatings/> */}
 {/* <Invoice/> */}
 
-
-
+{/* <TypingIndicator/> */}
+<BellNotifications/>
         </div>
+
   )
 }
 
